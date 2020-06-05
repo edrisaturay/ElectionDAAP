@@ -1,0 +1,1 @@
+const Election  = artifacts.require("./")
