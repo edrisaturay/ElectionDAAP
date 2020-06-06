@@ -25,7 +25,7 @@ contract Election{
     constructor () public {
         addCandidate("Nisha N Turay");
         addCandidate("Edrisa A Turay");
-        addCandidate("Marc Serex");
+        addCandidate(")
     }
 
     function addCandidate (
