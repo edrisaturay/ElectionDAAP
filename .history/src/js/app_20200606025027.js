@@ -31,10 +31,6 @@ App = {
       App.contracts.Election = TruffleContract(election)
       // Connect the provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider)
-
-      // Listen for events
-      App.listenForEvents()
-
       return App.render();
     })
   },
@@ -42,18 +38,9 @@ App = {
   listenForEvents: function() {
     App.contracts.Election.deployed().then(function (instance) {
       // Restart the browser if you're unable to receive this event
-      // This is a known issue with Metamask
-      instance.votedEvent({}, {
-        fromBlock: 0,
-        toBlock: "latest"
-      }).watch(function(error, event) {
-        console.log("Event triggered: ", event)
-        // Reload when a new vote is recorded
-        App.render()
-      })
+      // This is a 
     })
   },
-
   render: function() {
     let electionInstance
     let loader = $("#loader")

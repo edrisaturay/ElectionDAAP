@@ -43,6 +43,7 @@ App = {
     App.contracts.Election.deployed().then(function (instance) {
       // Restart the browser if you're unable to receive this event
       // This is a known issue with Metamask
+      console.log(instance)
       instance.votedEvent({}, {
         fromBlock: 0,
         toBlock: "latest"

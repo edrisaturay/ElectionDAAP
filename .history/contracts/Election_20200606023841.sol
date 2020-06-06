@@ -19,9 +19,7 @@ contract Election{
 
     uint public candidatesCount;
 
-    // Voted event
     event votedEvent (uint indexed _candidateId);
-
     constructor () public {
         addCandidate("Nisha N Turay");
         addCandidate("Edrisa A Turay");
@@ -47,7 +45,5 @@ contract Election{
 
         // record that voter has voted
         voters[msg.sender] = true;
-
-        emit votedEvent(_candidateId);
     }
 }

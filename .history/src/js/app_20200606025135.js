@@ -31,10 +31,6 @@ App = {
       App.contracts.Election = TruffleContract(election)
       // Connect the provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider)
-
-      // Listen for events
-      App.listenForEvents()
-
       return App.render();
     })
   },
@@ -47,13 +43,10 @@ App = {
         fromBlock: 0,
         toBlock: "latest"
       }).watch(function(error, event) {
-        console.log("Event triggered: ", event)
-        // Reload when a new vote is recorded
-        App.render()
+        console.log("Event triggered")
       })
     })
   },
-
   render: function() {
     let electionInstance
     let loader = $("#loader")

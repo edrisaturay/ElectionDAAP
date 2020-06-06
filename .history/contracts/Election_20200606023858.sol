@@ -19,7 +19,7 @@ contract Election{
 
     uint public candidatesCount;
 
-    // Voted event
+    // Voted in
     event votedEvent (uint indexed _candidateId);
 
     constructor () public {
@@ -47,7 +47,5 @@ contract Election{
 
         // record that voter has voted
         voters[msg.sender] = true;
-
-        emit votedEvent(_candidateId);
     }
 }

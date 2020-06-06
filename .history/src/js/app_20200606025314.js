@@ -34,7 +34,6 @@ App = {
 
       // Listen for events
       App.listenForEvents()
-
       return App.render();
     })
   },
@@ -48,7 +47,6 @@ App = {
         toBlock: "latest"
       }).watch(function(error, event) {
         console.log("Event triggered: ", event)
-        // Reload when a new vote is recorded
         App.render()
       })
     })

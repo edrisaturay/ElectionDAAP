@@ -48,6 +48,6 @@ contract Election{
         // record that voter has voted
         voters[msg.sender] = true;
 
-        emit votedEvent(_candidateId);
+        votedEvent(_candidateId);
     }
 }
